@@ -1,0 +1,21 @@
+@import "src/assets/variables";
+
+.option {
+  height: 44px;
+  padding: 4px 16px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  cursor: pointer;
+  &:last-child {
+    border-bottom: none;
+  }
+  &:hover {
+    background-color: $green-primary;
+    color: $white;
+  }
+  &Active {
+    background-color: $green-primary;
+    color: $white;
+  }
+}

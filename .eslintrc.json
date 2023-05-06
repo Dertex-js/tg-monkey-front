@@ -1,0 +1,121 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-react",
+    "prettier",
+    "import"
+  ],
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    },
+    "ecmaVersion": 2018,
+    "impliedStrict": true,
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "src"
+        ],
+        "extensions": [
+          ".js", ".jsx", ".ts", ".tsx"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "react/no-unstable-nested-components": "off",
+    "array-callback-return": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "no-plusplus": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "no-param-reassign": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "consistent-return": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "class-methods-use-this": "off",
+    "camelcase": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "no-case-declarations": "off",
+    "no-continue": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "default-param-last": "off",
+    "import/extensions": [
+      "error", "ignorePackages", {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "crlf",
+        "trailingComma": "none"
+      }
+    ],
+    "semi": [2, "never"],
+    "comma-dangle": ["error", "never"]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "react/function-component-definition": [
+          2, {
+            "namedComponents": "arrow-function"
+          }
+        ],
+        "react/button-has-type": 0,
+        "react/jsx-filename-extension": [
+          1, {
+            "extensions": [".jsx", ".tsx"]
+          }
+        ],
+        "import/no-unresolved": [
+          2, {
+            "commonjs": true
+          }
+        ],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/prefer-interface": "off",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": [
+          "error", {
+            "functions": false
+          }
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/ban-ts-comment": "off"
+      }
+    }
+  ]
+}

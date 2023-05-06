@@ -1,0 +1,92 @@
+@import 'src/assets/variables';
+@import 'src/assets/breakpoints';
+
+.link {
+  text-decoration: none;
+  font-weight: 500;
+  color: $black-tertiary;
+  &Primary {
+    color: $green-primary;
+    &:hover {
+      color: $green-quinary
+    }
+  }
+  &GoBack {
+    font-size: $black-tertiary;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &Dropdown {
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    gap: 8px;
+    color: $gray-quaternary;
+    &:hover {
+      color: $white;
+      background: $green-primary;
+      img {
+        -webkit-filter: saturate(0) brightness(100);
+        filter: saturate(0) brightness(100);
+      }
+    }
+    &Active {
+      color: $white;
+      background: $green-primary;
+      img {
+        -webkit-filter: saturate(0) brightness(100);
+        filter: saturate(0) brightness(100);
+      }
+    }
+
+  }
+  &Aside {
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    min-height: 28px;
+    gap: 8px;
+    border-left: 4px solid transparent;
+    &:hover {
+      color: $green-primary;
+      background: rgba(8, 166, 82, 0.12);
+      border-left: 4px solid $green-primary;
+      svg {
+        path {
+          fill: $green-primary
+        }
+      }
+    }
+    &Active {
+      color: $green-primary;
+      background: rgba(8, 166, 82, 0.12);
+      border-left: 4px solid $green-primary;
+      svg {
+        path {
+          fill: $green-primary
+        }
+      }
+    }
+  }
+  &Regular {
+    font-weight: 400;
+  }
+  &Medium {
+    font-weight: 500;
+  }
+  &Underline {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+      color: $green-quinary;
+    }
+  }
+  &Centered {
+    text-align: center;
+  }
+  &Wide {
+    width: 100%;
+  }
+}

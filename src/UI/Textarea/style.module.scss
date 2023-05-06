@@ -1,0 +1,28 @@
+@import 'src/assets/variables';
+
+.textarea {
+  width: 100%;
+  min-height: 144px;
+  padding: 10px 15px;
+  font-size: $input-primary-fz;
+  color: $gray-quaternary;
+  background-color: $gray-quinary;
+  border: 1px solid $gray-primary;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: $default-border-radius;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  resize: vertical;
+  line-height: 150%;
+  &:hover {
+    border: 1px solid $green-primary;
+  }
+  &:focus {
+    border: 1px solid $green-primary;
+    box-shadow: 0 0 0 5px rgba(8, 166, 82, 0.25);
+  }
+  &ValidateError {
+    border: 1px solid $red;
+  }
+}

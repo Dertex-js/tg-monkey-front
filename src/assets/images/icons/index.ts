@@ -1,0 +1,7 @@
+export { default as dropdownIcon } from './dropdown-icon.svg'
+export { default as closeIcon } from './closeAlert.svg'
+export { default as plusIcon } from './plus.svg'
+export { default as checkIcon } from './check.svg'
+export { default as showPassIcon } from './show-pass.svg'
+export { default as exitIcon } from './exit.svg'
+export { default as selectIcon } from './select-icon.svg'

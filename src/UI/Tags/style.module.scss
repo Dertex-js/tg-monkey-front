@@ -1,0 +1,18 @@
+@import 'src/assets/variables';
+
+.tagList {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tagItem {
+  padding: 10px 16px;
+  border-radius: 100px;
+  color: $black-secondary;
+  border: 1px solid $gray-primary;
+  &Selected {
+    border: 1px solid $orange-primary;
+    background: $orange-primary;
+    color: $white;
+  }
+}

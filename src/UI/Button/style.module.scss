@@ -1,0 +1,132 @@
+@import 'src/assets/variables';
+@import 'src/assets/breakpoints';
+
+.btn {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    margin-right: 8px;
+  }
+  &Wide {
+    width: 100%!important;
+  }
+  &Small {
+    padding: 6px 16px;
+  }
+  &Big {
+    font-size: $button-primary-fz;
+    line-height: 150%;
+  }
+  &Round {
+    border-radius: $default-border-radius;
+  }
+  &Dropdown {
+    padding: 4px 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 40px;
+    gap: 8px;
+    color: $gray-quaternary;
+    font-weight: 400;
+    img {
+      margin-right: 0;
+    }
+      @include table {
+        background: $white;
+      }
+    &:hover {
+      color: $white;
+      background: $green-primary;
+      img {
+        -webkit-filter: saturate(0) brightness(100);
+        filter: saturate(0) brightness(100);
+      }
+    }
+  }
+  a, label {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  &:disabled {
+    opacity: 0.8;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+.btnDefault {
+  &:hover {
+    color: $black-secondary;
+    background: #e1e1e1;
+  }
+}
+.btnPrimary {
+  color: $white;
+  background: $green-primary;
+  border: 1px solid $green-primary;
+  a {
+    color: $white;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.btnTertiary {
+  color: $green-primary;
+  background: transparent;
+  border: 1px solid transparent;
+  a {
+    color: $green-primary;
+  }
+}
+.btnOutlinePrimary {
+  background: transparent;
+  border: 1px solid $green-primary;
+  color: $green-primary;
+  a {
+    color: $green-primary;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.btnOutlineDark {
+  background: transparent;
+  border: 1px solid $black-secondary;
+  color: $black-secondary;
+  a {
+    color: $black-secondary;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.btnDeclinePrimary {
+  color: $gray-quaternary;
+  background: $grey-decline;
+  border: 1px solid $grey-decline;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.btnDanger {
+  background: $red;
+  color: $white;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.btnDark {
+  background: $black-secondary;
+  color: $white;
+  &:hover {
+    opacity: 0.8;
+  }
+}

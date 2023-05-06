@@ -1,0 +1,19 @@
+@import 'src/assets/variables';
+
+.accordionToggle {
+  background: $white;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .toggleDescription {
+    display: flex;
+    gap: 8px;
+  }
+}
+.accordionContent {
+  display: none;
+  &Open {
+    display: block;
+  }
+}

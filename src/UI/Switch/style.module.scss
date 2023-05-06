@@ -1,0 +1,63 @@
+@import 'src/assets/variables';
+
+.customSwitch {
+  font-size: 14px;
+  position: relative;
+  label {
+    font-weight: 400!important;
+  }
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    + label {
+      padding-left: 44px;
+      position: relative;
+      line-height: 20px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    + label::before,
+    + label::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 36px;
+      height: 20px;
+      bottom: 0;
+      display: block;
+    }
+    + label::before {
+      right: 0;
+      background-color: $gray-primary;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+    + label::after {
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 20px;
+      background-color: $white;
+      transition: .2s all;
+    }
+    &:checked + label::before {
+      background-color: $green-primary
+    }
+    &:checked + label::after {
+      margin-left: 16px;
+    }
+    &:focus + label::before {
+      outline: none;
+    }
+    &:disabled + label {
+      color: #ff8000;
+      cursor: not-allowed;
+    }
+    &:disabled + label::before {
+      background-color: #999999;
+    }
+  }
+}
