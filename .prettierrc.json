@@ -6,7 +6,7 @@
   "semi": false,
   "useTabs": true,
   "trailingComma": "none",
-  "endOfLine": "crlf",
+  "endOfLine": "auto",
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
     "^(utils)|^(helpers)",

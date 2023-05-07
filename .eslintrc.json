@@ -77,7 +77,7 @@
     "prettier/prettier": [
       "warn",
       {
-        "endOfLine": "crlf",
+        "endOfLine": "auto",
         "trailingComma": "none"
       }
     ],
