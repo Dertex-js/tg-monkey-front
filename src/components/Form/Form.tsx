@@ -1,7 +1,7 @@
 import { useTelegram } from 'hooks'
 import React, { useCallback, useEffect, useState } from 'react'
 
-import { CustomInput, CustomSelect } from 'UI'
+import { CustomButton, CustomInput, CustomSelect } from 'UI'
 import { CustomOptionValue, OptionItem } from 'UI/Select/types'
 
 import cl from './style.module.scss'
@@ -24,7 +24,7 @@ const Form = () => {
 			subject
 		}
 		tg.sendData(JSON.stringify(data))
-	}, [])
+	}, [city, street, subject])
 
 	useEffect(() => {
 		tg.onEvent('mainButtonClicked', onSendData)
@@ -77,6 +77,7 @@ const Form = () => {
 				placeholder="Выберите"
 				onChange={onChangeSubject}
 			/>
+			<CustomButton onClick={onSendData}>asdasd</CustomButton>
 		</div>
 	)
 }
