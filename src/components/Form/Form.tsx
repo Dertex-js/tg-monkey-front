@@ -17,6 +17,22 @@ const Form = () => {
 	const [subject, setSubject] = useState<CustomOptionValue>('')
 	const { tg } = useTelegram()
 
+	const onSendData = useCallback(() => {
+		const data = {
+			city,
+			street,
+			subject
+		}
+		tg.sendData(JSON.stringify(data))
+	}, [])
+
+	useEffect(() => {
+		tg.onEvent('mainButtonClicked', onSendData)
+		return () => {
+			tg.offEvent('mainButtonClicked', onSendData)
+		}
+	}, [])
+
 	useEffect(() => {
 		tg.MainButton.setParams({
 			text: 'Отправить данные'
@@ -29,7 +45,7 @@ const Form = () => {
 		} else {
 			tg.MainButton.show()
 		}
-	}, [city, street])
+	}, [city, street, subject])
 
 	const onChangeCity = useCallback((e: { target: { value: string } }) => {
 		setCity(e.target.value.trim())
@@ -43,7 +59,6 @@ const Form = () => {
 
 	return (
 		<div className={cl.form}>
-			<div>asdasds</div>
 			<CustomInput
 				type="text"
 				placeholder="Город"
