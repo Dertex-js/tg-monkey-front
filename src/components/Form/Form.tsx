@@ -29,7 +29,7 @@ const Form = () => {
 		} else {
 			tg.MainButton.show()
 		}
-	}, [city, street, subject])
+	}, [city, street])
 
 	const onChangeCity = useCallback((e: { target: { value: string } }) => {
 		setCity(e.target.value.trim())
