@@ -1,7 +1,7 @@
 import { useTelegram } from 'hooks'
 import React, { useCallback, useEffect, useState } from 'react'
 
-import { CustomButton, CustomInput, CustomSelect } from 'UI'
+import { CustomInput, CustomSelect } from 'UI'
 import { CustomOptionValue, OptionItem } from 'UI/Select/types'
 
 import cl from './style.module.scss'
@@ -77,7 +77,6 @@ const Form = () => {
 				placeholder="Выберите"
 				onChange={onChangeSubject}
 			/>
-			<CustomButton onClick={onSendData}>asdasd</CustomButton>
 		</div>
 	)
 }
