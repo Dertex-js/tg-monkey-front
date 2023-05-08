@@ -43,6 +43,7 @@ const Form = () => {
 
 	return (
 		<div className={cl.form}>
+			<div>asdasds</div>
 			<CustomInput
 				type="text"
 				placeholder="Город"
