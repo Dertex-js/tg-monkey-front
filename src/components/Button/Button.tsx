@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes, FC } from 'react'
 
-import cl from './Button.module.scss'
+import cl from './style.module.scss'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {}
 

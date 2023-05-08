@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 
-import DefaultCustomInput, { CustomInputProps } from './DefaultCustomInput'
-import { InputValidate } from './types'
+import { CustomInput } from 'UI'
+
+import { CustomInputProps, InputValidate } from './types'
 
 interface EmailCustomInputProps extends CustomInputProps {
 	validateError?: string
@@ -11,7 +12,7 @@ const EmailCustomInput: FC<EmailCustomInputProps> = ({
 	validateError,
 	...defaultProps
 }) => (
-	<DefaultCustomInput
+	<CustomInput
 		type="email"
 		placeholder="Электронная почта"
 		styleTypes={validateError ? [InputValidate.ERROR] : []}

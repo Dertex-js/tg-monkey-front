@@ -1,7 +1,8 @@
 import classnames from 'classnames'
 import React, { FC, InputHTMLAttributes } from 'react'
 
-import ValidateNotify from '../Input/ValidateNotify'
+import { ValidateNotify } from 'UI'
+
 import { InputValidate } from '../Input/types'
 import cl from './style.module.scss'
 

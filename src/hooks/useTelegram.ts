@@ -1,7 +1,7 @@
 // @ts-ignore
 const tg = window.Telegram.WebApp
 
-export const useTelegram = () => {
+const useTelegram = () => {
 	const onClose = () => {
 		tg.close()
 	}
@@ -21,3 +21,5 @@ export const useTelegram = () => {
 		user: tg.initDataUnsafe?.user
 	}
 }
+
+export default useTelegram

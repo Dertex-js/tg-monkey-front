@@ -1,6 +1,8 @@
 import React, { FC, useEffect, useState } from 'react'
 
-import DefaultCustomInput, { CustomInputProps } from './DefaultCustomInput'
+import { CustomInput } from 'UI'
+
+import { CustomInputProps } from './types'
 
 interface PhoneCustomInputProps extends CustomInputProps {
 	validateError?: string
@@ -36,7 +38,7 @@ const PhoneCustomInput: FC<PhoneCustomInputProps> = ({
 	}, [value])
 
 	return (
-		<DefaultCustomInput
+		<CustomInput
 			placeholder="8 (999)-999-9999"
 			value={formattedValue}
 			error={validateError}

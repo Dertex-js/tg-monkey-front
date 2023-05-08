@@ -1,9 +1,9 @@
 import classnames from 'classnames'
 import React, { FC } from 'react'
 
-import CustomButton from '../Button/CustomButton'
+import { CustomButton, CustomDropdownItem } from 'UI'
+
 import { ButtonSizes, ButtonStyles } from '../Button/types'
-import CustomDropdownItem from './CustomDropdownItem'
 import cl from './style.module.scss'
 import { CustomDropdownListProps } from './types'
 

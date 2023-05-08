@@ -1,17 +1,10 @@
 import classnames from 'classnames'
-import React, { FC, InputHTMLAttributes } from 'react'
+import React, { FC } from 'react'
 
-import ValidateNotify from './ValidateNotify'
+import { ValidateNotify } from 'UI'
+
 import cl from './style.module.scss'
-import { InputValidate } from './types'
-
-export interface CustomInputProps
-	extends InputHTMLAttributes<HTMLInputElement> {
-	phoneMask?: boolean
-	children?: React.ReactNode
-	styleTypes?: InputValidate[]
-	error?: string
-}
+import { CustomInputProps } from './types'
 
 const DefaultCustomInput: FC<CustomInputProps> = ({
 	styleTypes: styleTypesProps = [],

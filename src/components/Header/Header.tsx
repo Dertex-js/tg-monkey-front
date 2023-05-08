@@ -1,15 +1,16 @@
+import { useTelegram } from 'hooks'
 import React from 'react'
 
-import { useTelegram } from '../../hooks/useTelegram'
-import Button from '../Button/Button'
-import cl from './Header.module.scss'
+import { CustomButton } from 'UI'
+
+import cl from './style.module.scss'
 
 const Header = () => {
 	const { onClose, user } = useTelegram()
 
 	return (
 		<div className={cl.header}>
-			<Button onClick={onClose}>Закрыть</Button>
+			<CustomButton onClick={onClose}>Закрыть</CustomButton>
 			<span className={cl.username}>{user?.username}</span>
 		</div>
 	)

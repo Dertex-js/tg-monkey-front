@@ -1,6 +1,8 @@
 import React, { FC, useCallback, useState } from 'react'
 
-import DefaultCustomInput, { CustomInputProps } from './DefaultCustomInput'
+import { CustomInput } from 'UI'
+
+import { CustomInputProps } from './types'
 
 interface PassCustomInputProps extends CustomInputProps {
 	validateError?: string
@@ -21,13 +23,13 @@ const PassCustomInput: FC<PassCustomInputProps> = ({
 	}, [setType])
 
 	return (
-		<DefaultCustomInput error={validateError} type={type} {...defaultProps}>
+		<CustomInput error={validateError} type={type} {...defaultProps}>
 			<button
 				type="button"
 				onClick={changeInputType}
 				aria-label="Показать пароль"
 			/>
-		</DefaultCustomInput>
+		</CustomInput>
 	)
 }
 

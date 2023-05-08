@@ -2,7 +2,8 @@ import { dropdownIcon } from 'assets/images/icons'
 import { useMatchMedia, useOnClickOutside } from 'hooks'
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
 
-import CustomDropdownItemsList from './CustomDropdownItemsList'
+import { CustomDropdownItemsList } from 'UI'
+
 import cl from './style.module.scss'
 import { CustomDropdownProps } from './types'
 
