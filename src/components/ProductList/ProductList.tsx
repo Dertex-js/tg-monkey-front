@@ -1,5 +1,5 @@
 import { useTelegram } from 'hooks'
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 import ProductItem, { Product } from './ProductItem'
 import cl from './style.module.scss'
@@ -63,7 +63,29 @@ const getTotalPrice = (items: Product[] = []): number =>
 
 const ProductList = () => {
 	const [addedItems, setAddedItems] = useState<Product[]>([])
-	const { tg } = useTelegram()
+	const { tg, queryId } = useTelegram()
+
+	const onSendData = useCallback(() => {
+		const data = {
+			products: addedItems,
+			totalPrice: getTotalPrice(addedItems),
+			queryId
+		}
+		fetch('http://localhost:8000', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(data)
+		})
+	}, [])
+
+	useEffect(() => {
+		tg.onEvent('mainButtonClicked', onSendData)
+		return () => {
+			tg.offEvent('mainButtonClicked', onSendData)
+		}
+	}, [onSendData])
 
 	const onAdd = (product: Product) => {
 		const alreadyAdded = addedItems?.find((item) => item.id === product.id)
@@ -90,7 +112,12 @@ const ProductList = () => {
 	return (
 		<div className={cl.list}>
 			{products.map((item) => (
-				<ProductItem product={item} className="item" onAdd={onAdd} />
+				<ProductItem
+					product={item}
+					className="item"
+					onAdd={onAdd}
+					key={item.id}
+				/>
 			))}
 		</div>
 	)
