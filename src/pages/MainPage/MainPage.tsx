@@ -10,6 +10,7 @@ type Titles = {
 const MainPage = () => {
 	const titles: Titles[] = [
 		{ title: 'ТТК', route: '/ttk' },
+		{ title: 'Расписание', route: '/scheduling' },
 		{ title: 'Регламенты', route: '/regulations' },
 		{ title: 'Стандарты', route: '/standards' },
 		{ title: 'Правила безопасности', route: '/safety-regulations' },
@@ -17,7 +18,7 @@ const MainPage = () => {
 		{ title: 'Новости компании', route: '/company-news' }
 	]
 	return (
-		<div className="grid h-full grid-cols-2 gap-[5%] p-[5%]">
+		<div className="grid h-full grid-cols-2 gap-[5%] bg-main p-[5%]">
 			{titles.map((title) => (
 				<Card key={title.title} title={title.title} route={title.route} />
 			))}

@@ -15,7 +15,7 @@ const Card: FC<CardProps> = ({ title, route }) => {
 
 	return (
 		<div
-			className="flex h-full w-full items-center justify-center rounded border bg-gray-500"
+			className="flex h-full w-full items-center justify-center rounded-lg border bg-gray-500"
 			onClick={handleClick}
 		>
 			<span className="text-white">{title}</span>

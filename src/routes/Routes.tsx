@@ -3,6 +3,7 @@ import CompanyNews from 'pages/CompanyNews/CompanyNews'
 import MainPage from 'pages/MainPage/MainPage'
 import Regulations from 'pages/Regulations/Regulations'
 import SafetyRegulations from 'pages/SafetyRegulations/SafetyRegulations'
+import Scheduling from 'pages/Scheduling/Scheduling'
 import Standards from 'pages/Standards/Standards'
 import Ttk from 'pages/Ttk/Ttk'
 import React from 'react'
@@ -17,6 +18,10 @@ const Routes = () =>
 		{
 			path: '/ttk',
 			element: <Ttk />
+		},
+		{
+			path: '/scheduling',
+			element: <Scheduling />
 		},
 		{
 			path: '/regulations',
