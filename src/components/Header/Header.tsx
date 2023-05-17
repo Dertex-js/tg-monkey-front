@@ -1,17 +1,16 @@
+import { closeIcon } from 'assets/images/icons'
 import { useTelegram } from 'hooks'
 import React from 'react'
-
-import { CustomButton } from 'UI'
-
-import cl from './style.module.scss'
 
 const Header = () => {
 	const { onClose, user } = useTelegram()
 
 	return (
-		<div className={cl.header}>
-			<CustomButton onClick={onClose}>Закрыть</CustomButton>
-			<span className={cl.username}>{user?.username}</span>
+		<div className="flex w-full items-center justify-between bg-[#0087cd] p-[5%]">
+			<span className="text-white">
+				{user?.username || 'UserName'} любит Monkey Grinder
+			</span>
+			<img src={closeIcon} alt="Close" onClick={onClose} />
 		</div>
 	)
 }

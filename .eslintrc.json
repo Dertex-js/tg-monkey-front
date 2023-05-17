@@ -12,7 +12,8 @@
   ],
   "extends": [
     "airbnb",
-    "prettier"
+    "prettier",
+    "plugin:tailwindcss/recommended"
   ],
   "parserOptions": {
     "sourceType": "module",
