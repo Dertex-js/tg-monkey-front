@@ -6,7 +6,7 @@ const Header = () => {
 	const { onClose, user } = useTelegram()
 
 	return (
-		<div className="flex h-[10%] w-full items-center justify-between bg-[#0087cd] p-[5%]">
+		<div className="flex h-[10vh] w-full items-center justify-between bg-[#0087cd] p-[5%]">
 			<span className="text-white">
 				{user?.username || 'UserName'} любит Monkey Grinder
 			</span>
