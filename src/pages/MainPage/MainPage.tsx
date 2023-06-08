@@ -18,7 +18,7 @@ const MainPage = () => {
 		{ title: 'Новости компании', route: '/company-news' }
 	]
 	return (
-		<div className="grid h-full grid-cols-2 gap-[5%] bg-main p-[5%]">
+		<div className="grid h-[90%] grid-cols-2 gap-[5%] bg-main p-[5%]">
 			{titles.map((title) => (
 				<Card key={title.title} title={title.title} route={title.route} />
 			))}
