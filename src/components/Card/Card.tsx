@@ -15,10 +15,10 @@ const Card: FC<CardProps> = ({ title, route }) => {
 
 	return (
 		<div
-			className="flex h-full w-full items-center justify-center rounded-lg border bg-gray-500 p-[20px]"
+			className="flex h-full w-full items-center justify-center rounded-lg border bg-[var(--tg-theme-bg-color)] p-[20px]"
 			onClick={handleRoutePush}
 		>
-			<span className="text-lg text-white">{title}</span>
+			<span className="text-lg">{title}</span>
 		</div>
 	)
 }
